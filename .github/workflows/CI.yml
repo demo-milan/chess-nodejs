@@ -23,15 +23,6 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: ${{ env.NODE_VERSION }}
-         
-#                                   ---experimental---         
-#     - name: Cache node modules
-#       uses: actions/cache@v1
-#       with:
-#         path: ${{ env.CACHE_PATH }}
-#         key: ${{ env.CACHE_PATH }}-${{ hashFiles('package-lock.json') }}
-#         restore-keys: |
-#           ${{ env.CACHE_PATH }}-
     
     - name: Gazer dependencies
       run: npm install
